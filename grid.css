@@ -14,5 +14,7 @@
 .rubrik{
     grid-column: 2/3;
 }
-
+.hamburger{
+    grid-column: 3/4;
+}
     
