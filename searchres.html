@@ -26,12 +26,12 @@
     <header class="indexheader">
 
 
-        <div class="searchbar">
-			<input type="text" id="search-box" class="search-box">
-			<button id="search-button">Sök</button>
-		</div>
-        
-            <a class="rubrik" href="searchres.html">
+            <div class="searchbar">
+                <input type="text" id="search-box" class="search-box">
+                <button id="search-button">Sök</button>            
+            </div>
+
+            <a class="rubrik" href="index.html">
                 <img src="img/Logga2.png" alt="logga" width="200px" >
             </a>
 
@@ -48,7 +48,7 @@
                             <button class="dropbtn">
                                 <a class="nav-link" href="#">Brädor</a>
                             </button>
-                            <div id="mydropdown" class="dropdown-content">
+                            <div id="mydreopdown" class="dropdown-content">
                                 <a href="#">link1.1</a>
                                 <a href="#">link1.2</a>
                                 <a href="#">link1.3</a>
@@ -198,10 +198,13 @@
     </containter>
     </div>
     <containter class="container-content">
+        <h1 id="search-heading" class="rubrik-sökresultat">Hej</h1>
+        <div class="search-results">
+            <h2 id="search-title"></h2>
+            <div class="grid-container" id="search-results-container"></div>
+          </div>
+          
 
-        <div class="content-mainpicture">
-            <img src="img/nedladdning (1).jpeg" alt="" width="100%">
-        </div>
     </containter>
 
     <script src="script.js"></script>

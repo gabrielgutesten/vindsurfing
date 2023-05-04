@@ -6,6 +6,7 @@
 
 body{
     background-color: deepskyblue;
+
 }
 li{
     display: inline;
@@ -81,14 +82,17 @@ li{
     align-items: center;
 }
 .searchbar{
-        padding-top: 10px;
-        padding-bottom: 10px;
-        background-color: white;
-        width: 50%;
-        margin-left: 10%;
-        padding-left: 10px;
-
-}
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    width: 50%;
+    min-width: 200px; /* sätt här det minsta breddvärdet du vill ha */
+    margin-left: 5%;
+    padding-left: 10px;
+  }
+  
 .search-box{
     padding: 5px;
 }
@@ -159,11 +163,9 @@ nav{
     position: absolute;
     z-index: 1;
     background-color: black;
-
     font-size: 14px;
     justify-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
  
 }
 .dropdown-content a{
@@ -183,6 +185,7 @@ nav{
 }
 
 .dropdown:hover .dropdown-content{
+    transition: all 0.5s ease;  
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -190,19 +193,26 @@ nav{
     width: 90%;
     left: 5%;
     top: 25.4%;
+ 
+
 }
 .dropdown:hover .nav-link{
     background-color: black;
     color: rgb(49, 125, 255);
+    transition: all 0.2s ease-in-out;
 }
 
 .container-content{
-    margin-top: 20%;
+
 }
 .content-mainpicture{
     width: 70%;
     min-width: 710px;
     margin: 0 auto;
+    padding-top: 187px;
+}
+.rubrik-sökresultat{
+    padding-top: 187px;
 }
 
 @media(max-width: 1000px) {
@@ -244,11 +254,26 @@ nav{
         border: 0;
         
     }
+    .search-box{
+        min-width: 80px;
+        width: 100%;
+    }
+    .searchbar{
+        min-width: 140px;
+        margin-left: 3px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
     .content-mainpicture{
         width: 100%;
         margin: 0;
         min-width: 0;
-
+        padding-top: 93px;
+    }
+    .rubrik-sökresultat{
+        padding-top: 93px;
+        padding: 10px;
+        color: black;
     }
     .hamburger.active .bar:nth-child(2){
         opacity: 0;

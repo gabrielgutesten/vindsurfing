@@ -17,4 +17,33 @@
 .hamburger{
     grid-column: 3/4;
 }
-    
+
+.container-searchres{
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    width: 80%;
+    margin-top: 20px;
+
+}
+   
+.search-results {
+    margin: 20px;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .grid-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .grid-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
