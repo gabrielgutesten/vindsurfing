@@ -46,4 +46,10 @@
     max-width: 100%;
     height: auto;
   }
-  
+
+  .sidenav{
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-rows: auto;
+  }
+
