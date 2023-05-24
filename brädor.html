@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Windserf-OfficialWebsite</title>
+    <title>Windsurf-OfficialWebsite</title>
     <link rel="stylesheet" href="grid.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="databas" href="databas.json">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
@@ -24,14 +25,8 @@
     
     
     <header class="indexheader">
-
-
-            <div class="searchbar">
-                <input type="text" id="search-box" class="search-box">
-                <button id="search-button">Sök</button>            
-            </div>
-
-            <a class="rubrik" href="index.html">
+        
+            <a class="rubrik" href="searchres.html">
                 <img src="img/Logga2.png" alt="logga" width="200px" >
             </a>
 
@@ -40,9 +35,18 @@
             </button>
             
            
-      
   </header>
-        
+         <div class="sidenav">
+                <a href="#">Brädor</a>
+                <a href="#">Segel</a>
+                <a href="#">Riggdelar</a>
+                <a href="#">Fenor</a>
+                <a href="#">Tillbehör</a>
+                <a href="#">Kurser</a>
+                <a href="#">Kontakta oss</a>
+                <a href="#">Butiken</a>
+                <a href="#">Logga in</a>
+            </div class="sidenav">
 
             <nav>
                 <ul class="nav-menu" id="site-content">
@@ -51,7 +55,7 @@
                             <button class="dropbtn">
                                 <a class="nav-link" href="#">Brädor</a>
                             </button>
-                            <div id="mydreopdown" class="dropdown-content">
+                            <div id="mydropdown" class="dropdown-content">
                                 <a href="#">link1.1</a>
                                 <a href="#">link1.2</a>
                                 <a href="#">link1.3</a>
@@ -197,17 +201,33 @@
                     
                 </ul>
             </nav>
-         
+      
     </containter>
     </div>
-    <containter class="container-content">
-        <h1 id="search-heading" class="rubrik-sökresultat">Hej</h1>
-        <div class="search-results">
-            <h2 id="search-title"></h2>
-            <div class="grid-container" id="search-results-container"></div>
-          </div>
-          
+    <containter class="container-content-brädor">
+        <div class="beskrivning-brädor">
+            <h2 class="beskrivning-brädor-rubrik">Vindsurfingsbrädor</h2>
+            <p class="beskrivning-brädor-brödtext">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, eos? Alias cupiditate, voluptates esse quos reiciendis neque ab, repudiandae placeat inventore nemo aut modi debitis sint praesentium! Quis, error dolore?
+            </p>
+            <img src="img/Magic_ride_es_2022.jpg" alt="bräda" class="beskrivning-brädor-bild">
+        </div>
+        <div class="main-content-brädor">
+            <div class="main-content-brädor-nybörjarbräda">
+            <h2 >Nybörjarbräda</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In error repellendus consequuntur. Esse, beatae accusamus tenetur corporis animi quod dolores praesentium. Saepe tempora culpa est cupiditate, asperiores voluptatibus dolore rem.
+            </p>
+            <div class="material-symbols">
+             <h2>3990:-</h2>
+            <span class="material-symbols-outlined">
+                favorite
+                </span>
+            </div>
+        </div>
+            <img src="img/nybörjarbräda.webp" alt="nybörjarbräda" class="main-content-brädor-nybörjarbräda-bild">
+        </div>
+        <div>
 
+        </div>
     </containter>
 
     <script src="script.js"></script>

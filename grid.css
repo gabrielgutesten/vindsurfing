@@ -49,7 +49,46 @@
 
   .sidenav{
 
-    grid-template-columns: repeat(2, 1fr);
-    grid-rows: auto;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row: auto;
   }
+
+.container-content-brädor{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+
+}
+.beskrivning-brädor{
+  display: grid;
+  grid-template-columns: repeat(3, 0.4fr);
+  grid-row: auto;
+}
+.beskrivning-brädor-rubrik{
+  grid-column: 1/2;
+  grid-row: 1;
+}
+.beskrivning-brädor-brödtext{
+  grid-column: 1/3;
+  grid-row: 1;
+}
+.beskrivning-brädor-bild{
+  width: 70%;
+  align-self: center;
+  grid-column: 3/4;
+  grid-row: 1/3;
+}
+.main-content-brädor{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row: auto;
+}
+.main-content-brädor-nybörjarbräda{
+  grid-column: 1;
+  grid-row: 1;
+}
+.main-content-brädor-nybörjarbräda-bild{
+  grid-column: 2;
+  grid-row: 1;
+}
 
