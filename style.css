@@ -3,18 +3,25 @@
     padding: 0;
 
 }
-
+/*Dessa raderna nollställer alla marginaler och padding för alla element på sidan.*/
 body{
     background-color: darkblue;
 
 }
+/*Bas bakgrundsfärg*/
 li{
     display: inline;
 }
+/*Detta tillämpas på alla listelement (li) och gör dem inline-element, vilket innebär att de visas bredvid varandra istället för på separata rader.
+
+*/
 .container-top{
     position: fixed;
     width: 100%;
 }
+/*Klassen "top" används för att skapa en toppmeny eller toppkontrollpanel. Den är flexibel och tar upp 100% av bredden. Den har också en viss padding och bakgrundsfärg.
+
+*/
 .top{
     display: flex;
     width: 100%;
@@ -24,6 +31,7 @@ li{
     border: 10px;
     background-color: darkblue;
 }
+
 .snav-menu{
     display: flex;
     justify-content: space-between;
@@ -31,13 +39,22 @@ li{
     margin-left: 5%;
 
 }
+/*Klassen "snav-menu" används för att skapa en mindre navigationsmeny i toppkontrollpanelen. Den använder flexbox för att centrera och placera elementen jämnt mellanrum.
+
+*/
 .snav-link{
     color: white;
     text-decoration: none;
 }
+/*Klassen "snav-link" används för att styla länkarna i navigationsmenyn. Den sätter textfärgen till vit och tar bort understrykning från länkarna.
+
+*/
 header{
     z-index: 99;
 }
+/*Detta sätter z-index-värdet för headerelementet till 99. Z-index används för att definiera staplingsordningen för element, där högre värden placeras över element med lägre värden.
+
+*/
 .hamburger{
     position: relative;
     display: none;
@@ -51,6 +68,9 @@ header{
     z-index: 98;
 
 }
+/*Klassen "hamburger" används för att skapa en knapp med ett hamburgarikon, vanligtvis används den för att visa en dold sidonavigering på mobila enheter. Här ställs positionen till relativ, vilket gör att den kan placeras relativt till sitt förälderelement. Den har också en display-inställning av "none" som gör att den inte visas som standard. Den har en margin-left på 55% för att placera den till höger på sidan. Dess bredd är 35px och andra egenskaper sätts för att ändra utseendet på knappen.
+
+*/
 .hamburger .bar, .hamburger:after, .hamburger:before {
     content: '';
     display: block;
@@ -60,6 +80,9 @@ header{
     margin: 7px 0px;
     transition: 0.4s;
 }
+/*Dessa regler används för att skapa de tre horisontella linjerna som utgör hamburgarikonen. De har en viss bredd, höjd, bakgrundsfärg, marginal och övergångseffekt.
+
+*/
 .hamburger.is-active:before{
      transform: rotate(-45deg) translate(-6px, 6px);
 }
@@ -69,6 +92,9 @@ header{
 .hamburger.is-active .bar{
     opacity: 0;
 }
+/*Dessa regler används för att ändra utseendet på hamburgarikonen när den är i "aktivt" tillstånd. Genom att tillämpa en transformering och ändra värdena för rotation och translation, roteras och flyttas de horisontella linjerna för att bilda ett kryss.
+
+*/
 
 .bar{
     display: block;
@@ -80,6 +106,9 @@ header{
     background-color: white;
     
 }
+/*Detta definierar stilen för baren i hamburgarikonen. Den har en viss bredd, höjd, marginal och bakgrundsfärg. Övergångseffekter används för att skapa smidiga övergångar.
+
+*/
 .sidenav{
     display: none;
     position: fixed;
@@ -90,10 +119,14 @@ header{
      z-index: 98;
      transition:  0.4s;
 }
+/*Klassen "sidenav" används för att skapa en sidonavigering. Som standard är den dold (display: none), men positionerad som fast, och den placeras till höger om sidan. Den har en viss bredd och höjd och z-index-värde. Övergångseffekter används för att ändra positionen smidigt.
+
+*/
 .sidenav.is-active{
     left: 50%;
     min-width: 500px;
 }
+/*Sidonavigeringen syns när den blir aktiverad*/
 .sidenav a{
     display: block;
     text-align:  left;
@@ -107,6 +140,9 @@ header{
     text-decoration: none;
     opacity: 130%;
 }
+/*Dessa regler används för att formatera länkarna i sidonavigeringen. De är blockelement som har en viss textjustering, bredd och padding. De har också en bakgrundsfärg, textfärg, ingen understrykning och en viss opacitet.
+
+*/
 .sidenav a:hover{
     background-color: blue;
 }
@@ -115,6 +151,7 @@ header{
     border: none;
     outline: none;
 }
+/*Border none och outline none tar bort standardutseendet för en button*/
 .sidenav-bar{
     content: '';
     display: block;
@@ -123,18 +160,20 @@ header{
     transition: 0.4s;
 
 }
+/*Dessa regler definierar en linje som används för att dela upp innehållet i sidonavigeringen. Linjen har en viss bredd och bakgrundsfärg. Övergångseffekter används för att skapa smidiga övergångar.
 
+*/
 .indexheader{
     background-color: black;
     align-items: center;
     justify-content: center;
 }
+/*Denna del av koden tillämpar en svart bakgrundsfärg på indexhuvudet och centrera både horisontellt och vertikalt innehållet.
 
+*/
 .rubrik{
     align-self: center;
     margin-left: 20%;
-
-    
 }
 
 nav{
@@ -148,6 +187,9 @@ nav{
     
 
 }
+/*Denna del av koden gör att menynavigeringselementen visas i en rad, centrerar dem horisontellt och vertikalt inom menynavigeringen.
+
+*/
 .nav-item{
     padding: 20px;
 }
@@ -160,6 +202,9 @@ nav{
     position: center;
 
 }
+/*Denna del av koden definierar stilen för en knapp och ger den en vit bakgrundsfärg och vit textfärg.
+
+*/
 .nav-link{
     padding: 30px;
     padding-left: 30px;
@@ -170,6 +215,9 @@ nav{
     font-size: medium;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+/*Denna del av koden definierar stilen för en länk i navigeringsmenyn, inklusive padding, textdekorering, textfärg och typsnittsrelaterade egenskaper.
+
+*/
 .nav-link:hover{
     background-color: black;
     color: white;
@@ -178,7 +226,9 @@ nav{
     display: block;
 
 }
+/*Denna del av koden gör att dropdown-innehållet visas när användaren hovrar över länken i navigeringsmenyn.
 
+*/
 .dropdown-content{
     display: none;
     position: absolute;
@@ -189,6 +239,9 @@ nav{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
  
 }
+/*Denna del av koden definierar stilen för dropdown-innehållet, inklusive dess positionering, bakgrundsfärg, typsnittsrelaterade egenskaper och display-status (initialt dolt).
+
+*/
 .dropdown-content a{
     color: white;
     text-decoration: none;
@@ -198,11 +251,16 @@ nav{
     padding-top: 20px;
     font-size: small;
 }
+/*Denna del av koden definierar stilen för länkarna inuti dropdown-innehållet, inklusive text
+*/
 .dropdown-content a:hover{
     transition: ease-out;
     color: rgb(49, 125, 255);
 }
+/*
+Denna del av koden definierar stilen för länkarna i dropdown-innehållet när de hovras över, inklusive en färgövergång och en ändring av textfärg.
 
+*/
 .dropdown:hover .dropdown-content{
     transition: all 0.5s ease;  
     position: fixed;
@@ -210,11 +268,16 @@ nav{
     left: 5%;
     top: 25.4%;
 }
+
 .dropdown:hover .nav-link{
     background-color: black;
     color: rgb(49, 125, 255);
     transition: all 0.2s ease-in-out;
 }
+/*Denna del av koden definierar effekterna när användaren hovrar över en dropdown-knapp, inklusive positionering och animering.
+
+*/
+
 
 .content-mainpicture{
     width: 70%;
@@ -257,11 +320,18 @@ nav{
     margin-left: 5px;
 
 }
+/*Denna del av koden definierar stilen för en kontursymbol inom materialerna, inklusive fontstorlek, markör, border-radie, padding, bakgrundsfärg och vänstermarginal.
+
+*/
 .material-symbols-outlined:hover{
     color: red;
     transition: 0.2s;
 
 }
+
+/*Denna del av koden definierar effekterna när användaren hovrar över en kontursymbol inom materialerna, inklusive en ändring av textfärg och en övergångseffekt.
+
+*/
 .material-symbols{
 
     width: 60px;
@@ -270,18 +340,20 @@ nav{
     margin-top: 20px;
     background-color: rgba(255, 0, 0, 0.7);
 }
+/*Denna del av koden definierar stilen för en symbol inom materialerna, inklusive bredd, border-radie, padding, toppmarginal och bakgrundsfärg.
 
-.pris-nybörjarbräda{
-}
+*/
+
 .material-symbols-outlined.is-active{
     color: red;
     transform: translateY(5px);
     opacity: 100%;
     background-color: white;
 }
-.material-symbols-outlined-notice{
+/*Denna del av koden definierar stilen för en aktiv kontursymbol inom materialerna, inklusive en ändring av textfärg, en transformering i vertikal riktning, fullständig opacitet och en bakgrundsfärg.
 
-}
+*/
+
 .main-content-brädor-nybörjarbräda-bild{
     border-color: black;
     border-width: 2px;
@@ -294,6 +366,9 @@ nav{
     width: 190px;
     color: black;
 }
+/*Denna del av koden definierar stilen för texten med id "text1", inklusive toppmarginal, vänstermarginal, padding, bakgrundsfärg, bredd och textfärg.
+
+*/
 .footer{
     display: flex;
     justify-content: space-between;
@@ -303,8 +378,10 @@ nav{
     background-color: white;
     padding: 10px;
     padding-bottom: 50px;
-    font-weight: ;
+    font-weight: 500;
 }
+/*Denna del av koden definierar stilen för sidfoten, inklusive flex-läge, justering av innehåll, textdekorering, textfärg, bakgrundsfärg, padding och fontvikt.
+*/
 
 
 @media(max-width: 1000px) {
@@ -318,11 +395,15 @@ nav{
     
         top: 25%;
     }
+   
     .nav-link{
         padding-left: 10px;
         padding-right: 10px;
     }
 }
+ /*Denna del av koden definierar regler som gäller när skärmbredden är högst 1000px. När användaren hovrar över en dropdown-knapp kommer dropdown-innehållet att visas i ett rutnätsformat med tre kolumner. Samtidigt minskas vänster- och högerpadding för navigationslänkarna.
+
+*/
 
 @media screen and (max-width: 710px){
     .nav-menu{
@@ -429,3 +510,5 @@ nav{
         transition: 0.2s;
     }
 }
+/*Denna del av koden definierar regler som gäller när skärmbredden är högst 710px. I dessa fall göms navigationsmenyn och istället visas en hamburgermenyknapp. Andra element, som "top" och "searchbar", har sina visningsinställningar ändrade. Vissa element får också ändrad position och storlek, såsom rubriken, sidomenyn, bilder och bräddata. Dessutom används ett rutnätsformat för huvudinnehållet med två kolumner istället för ett.
+*/
